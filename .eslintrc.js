@@ -14,8 +14,16 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        // "vue"
+        "vue"
     ],
     "rules": {
-    }
+    },
+    "overrides": [
+        {
+            "files":['src/api/**/*.ts'],
+            "rules": {
+                "camelcase":"off"
+            }
+        }
+    ]
 }
