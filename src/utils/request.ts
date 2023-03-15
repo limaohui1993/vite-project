@@ -1,7 +1,7 @@
-import axios from 'axios';
+import axios,{ AxiosRequestConfig} from 'axios';
 
 let request=axios.create({
-    baseURL:"https://shop.fed.lagou.com/api/admin"
+    baseURL:import.meta.env.VITE_API_BASEURL
 })
 
 // 请求拦截器
@@ -26,4 +26,6 @@ request.interceptors.response.use(
     }
   )
 
-export default request
+export default <T=any>(config:AxiosRequestConfig)=>{
+    return request(config).then(res=>res.data.data as T)
+}

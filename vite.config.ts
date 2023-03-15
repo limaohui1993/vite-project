@@ -21,5 +21,15 @@ export default defineConfig({
         additionalData: `@import "@/styles/variables.scss";`
       },
     }
-  }
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://shop.fed.lagou.com/api/admin',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
+
 })

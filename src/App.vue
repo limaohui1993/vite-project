@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import locale from 'element-plus/dist/locale/zh-cn.mjs'
 </script>
 
 <template>
-<router-view></router-view>
+   <el-config-provider :locale="locale">
+    <router-view></router-view>
+  </el-config-provider>
+
 </template>
 
 <style scoped>
