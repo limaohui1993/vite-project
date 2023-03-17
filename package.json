@@ -10,6 +10,7 @@
     "lint": "eslint src/**/*.{js,jsx,vue,ts,tsx} --fix"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^1.1.4",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
     "axios": "^1.3.4",
     "element-plus": "^2.3.0",

@@ -5,6 +5,7 @@
         class="el-menu-vertical-demo"
         default-active="2"
         text-color="#fff"
+        :collapse="$store.state.collapse"
         router
       >
         <el-menu-item index="/">
@@ -32,8 +33,12 @@
       </el-menu>
 </template>
 <script lang="ts" setup>
- const handleOpen=()=>{};
- const handleClose=()=>{};
+import {
+  Document,
+  Menu as IconMenu,
+  Location,
+  Setting,
+} from '@element-plus/icons-vue'
 </script>
 <style lang='scss' scoped>
  .el-menu{
