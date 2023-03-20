@@ -4,3 +4,8 @@ export interface ILoginInfo{
     login_square: string,
     slide: string[],
 }
+export interface IUserInfo {
+    id: number
+    account: string
+    head_pic: string
+  }

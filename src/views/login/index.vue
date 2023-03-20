@@ -103,8 +103,8 @@
  })
  
  const loadCaptcha = async () => {
-   const data = await getCaptcha()
-   captchaSrc.value = URL.createObjectURL(data)
+   // const data = await getCaptcha()
+   // captchaSrc.value = URL.createObjectURL(data)
  }
  
  const handleSubmit = async () => {
